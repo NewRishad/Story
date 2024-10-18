@@ -1,2 +1,27 @@
-To be or not to be. The importance is key
- 
+# example A:
+# When you forget to add .env to .gitignore and you already did a $ git add . $ git push origin main.
+# Add .env to .gitignore
+echo ".env" >> .gitignore
+
+# Remove it from the staging area
+git rm --cached .env
+
+# Commit the change to the repo
+git commit -m "Add .env to .gitignore and remove it from repository"
+
+# Sync to server
+git push origin master
+
+# Warning: DO NOT RUN THE FOLLOWING COMMAND, it can rewrite history dangerously
+# git filter-branch --force --index-filter "git rm --cached --ignore-unmatch .gitignore" --prune-empty --tag-name-filter cat -- --all
+
+# Do it the right way:
+# Download and install BFG Repo-Cleaner
+# Run the BFG Repo-Cleaner
+java -jar bfg-1.14.0.jar --delete-files .env
+
+# Delete the .env files from your history using a specialized tool
+bfg --delete-files .env
+
+# Force git to comply with changing your history
+git push --force

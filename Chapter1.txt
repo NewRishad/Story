@@ -1,1 +1,1 @@
-One small step for current Rishad, One big step for future Rishad
+This is the beginning of learning Git and how to use it with Git Bash

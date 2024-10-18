@@ -1,2 +1,34 @@
-I will not be using visual studio code for quick edits because vim and nano just seem to work better. Maybe for like large projects.
-But if it's something I already kinda know or really want to set in for learning then I think vim might just be the way those times
+# Introduction To Git Bash
+Git Bash is a package that provides a Git command line experience for Windows(Sue ME) users. 
+
+As Git Bash comes wth a bash emulator to run Git commands, then that is what we will be using.
+
+Learning Resources:
+ProGit Book
+Download link: https://git-scm.com/book/en/v2
+
+# Git Basics
+```bash
+# getting started with a new repo
+# make a new dir
+$ mkdir AR_Modelling
+# enter dir
+$ cd AR_modelling
+# initialize git
+$ git init
+# create a file in the repo
+$ touch app.c
+# make git take a snapshot of the file
+$ git add app.c# 
+# commit the file to git repo
+$ git commit -m "Initial Commit"
+
+# go to github and create a repo. 
+# If you don't have a github account, make sure to log in using git config
+
+# connect your local repo to the github repo that you created
+$ git remote add origin <url-link-from-github>  # binds the master branch to origin
+# push your code from your remote code in origin to the master branch
+$ git push -u origin master  			# -u refers to upstream meaning that you can now just do $ git push
+# Congradulations you have set up a basic git project that allows for endless code failure
+```
