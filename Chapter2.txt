@@ -1,0 +1,2 @@
+I will not be using visual studio code for quick edits because vim and nano just seem to work better. Maybe for like large projects.
+But if it's something I already kinda know or really want to set in for learning then I think vim might just be the way those times
