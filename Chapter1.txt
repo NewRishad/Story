@@ -1,1 +1,35 @@
-This is the beginning of learning Git and how to use it with Git Bash
+
+# Adding a New Repo to Git and Linking it to a Repository (Repo)
+
+# Make a new project directory (dir)
+$ mkdir TheProject
+
+# Enter the dir
+$ cd TheProject  # Ensuring case consistency
+
+# Initialize Git
+$ git init
+
+# Create a new README file
+$ touch README
+
+# Write to the README file
+$ echo "This is the project to end all other projects" > README
+
+# Stage the README file in Git
+$ git add README
+
+# Commit the staged files to your local repo
+$ git commit -m "Initial commit with README"
+
+# Link your local repo to a GitHub repository using your GitHub URL
+$ git remote add origin <github-repo-link>
+
+# Push your code to the master branch of your remote repo on GitHub
+$ git push -u origin master  # -u sets the upstream
+
+# Congratulations! You have set up Git in your repo.
+
+# Carrying on, remember to stage your changes and commit to the repo before doing any more push requests.
+
+# Note: Since we used -u when pushing, you can now simply use git push for subsequent pushes.
